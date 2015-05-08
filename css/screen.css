@@ -22,7 +22,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 body { font-family: "Open Sans", sans-serif; font-size: 12px; line-height: 1.4; }
 
-a { text-decoration: none; color: black; }
+a { text-decoration: none; color: #000; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
@@ -32,9 +32,10 @@ a { text-decoration: none; color: black; }
 .header__in { width: 1355px; margin: 0 auto; *zoom: 1; }
 .header__in:after { content: " "; display: table; clear: both; }
 .header .logo { float: left; margin: 20px 0; }
-.header .tools { float: right; margin: 30px 0; }
-.header .tools__in { display: inline-block; vertical-align: middle; text-align: right; }
+.header .tools { float: right; font-size: 0; }
+.header .tools__in { display: inline-block; vertical-align: top; margin-top: 33px; text-align: right; font-weight: lighter; padding-left: 15px; }
 .header .tools__in a { display: block; }
-.header .tools__in a.phone { font-weight: lighter; font-size: 26px; }
-.header .tools__in p { display: block; padding-top: 7px; text-align: left; }
-.header .tools.bober { margin: 25px 0 10px; }
+.header .tools__in a.phone { font-size: 26px; }
+.header .tools__in a.mail { font-size: 13px; color: #218DA4; }
+.header .tools__in p { display: block; padding-top: 7px; text-align: left; font-size: 13px; }
+.header .tools__in.bober { margin: 25px 0 10px; padding-left: 55px; }
