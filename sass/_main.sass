@@ -3,8 +3,7 @@
 // header
 .header
 	&__in
-		width: 1355px
-		margin: 0 auto
+		+wrap
 		+clr
 	.logo
 		float: left
@@ -15,22 +14,40 @@
 		&__in
 			display: inline-block
 			vertical-align: top
-			margin-top: 33px
+			margin-top: 24px
 			text-align: right
 			font-weight: lighter
-			padding-left: 15px
+			padding-left: 17px
 			a
 				display: block
 				&.phone
 					font-size: 26px
 				&.mail
+					margin-top: -6px
 					font-size: 13px
 					color: #218DA4 
 			p
 				display: block
-				padding-top: 7px
+				padding-top: 1px
 				text-align: left
 				font-size: 13px
+				&:first-child
+					padding-top: 11px
 			&.bober
 				margin: 25px 0 10px
-				padding-left: 55px
+				padding-left: 45px
+	&__bottom
+		background: #0A6A86
+		nav
+			display: inline-block
+			vertical-align: top
+			&.menu
+				li
+					display: inline-block
+					vertical-align: middle
+					a
+						display: block
+						padding: 25px 30px
+						font-weight: lighter
+						font-size: 18px
+						color: #FFF

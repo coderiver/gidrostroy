@@ -29,13 +29,18 @@ a { text-decoration: none; color: #000; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.header__in { width: 1355px; margin: 0 auto; *zoom: 1; }
+.header__in { width: 1340px; margin: 0 auto; *zoom: 1; }
 .header__in:after { content: " "; display: table; clear: both; }
 .header .logo { float: left; margin: 20px 0; }
 .header .tools { float: right; font-size: 0; }
-.header .tools__in { display: inline-block; vertical-align: top; margin-top: 33px; text-align: right; font-weight: lighter; padding-left: 15px; }
+.header .tools__in { display: inline-block; vertical-align: top; margin-top: 24px; text-align: right; font-weight: lighter; padding-left: 17px; }
 .header .tools__in a { display: block; }
 .header .tools__in a.phone { font-size: 26px; }
-.header .tools__in a.mail { font-size: 13px; color: #218DA4; }
-.header .tools__in p { display: block; padding-top: 7px; text-align: left; font-size: 13px; }
-.header .tools__in.bober { margin: 25px 0 10px; padding-left: 55px; }
+.header .tools__in a.mail { margin-top: -6px; font-size: 13px; color: #218DA4; }
+.header .tools__in p { display: block; padding-top: 1px; text-align: left; font-size: 13px; }
+.header .tools__in p:first-child { padding-top: 11px; }
+.header .tools__in.bober { margin: 25px 0 10px; padding-left: 45px; }
+.header__bottom { background: #0A6A86; }
+.header__bottom nav { display: inline-block; vertical-align: top; }
+.header__bottom nav.menu li { display: inline-block; vertical-align: middle; }
+.header__bottom nav.menu li a { display: block; padding: 25px 30px; font-weight: lighter; font-size: 18px; color: #FFF; }
