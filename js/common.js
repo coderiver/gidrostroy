@@ -4,16 +4,8 @@ head.ready(function() {
 	// 	$(".js-popup").hide();
 	// });
 
-	// function scrollFixedElements() {
-	//     var scroll_left = $(this).scrollLeft();
-	//     $(".fixed-element").css({
-	//         left: -scroll_left
-	//     });
-	// }
-	// scrollFixedElements();
-	// $(window).scroll(function(){
-	//     scrollFixedElements()
-	// });
+	$(".projects__marker").click(function(){
+		$(this).find(".projects__info").toggleClass("is-active");
+	});
 
-	console.log($('body').html());
 });

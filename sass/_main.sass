@@ -27,8 +27,7 @@
 					font-size: 26px
 				&.mail
 					margin-top: -6px
-					font-size: 13px
-					color: #218DA4 
+					font-size: 13px 
 			p
 				display: block
 				padding-top: 1px
@@ -138,11 +137,12 @@
 				&.mail
 					display: inline-block
 					vertical-align: top
-					color: #218DA4
 					font-size: 15px 
 					padding: 10px
+				&:hover
+					color: darken(#686868, 100%)
 	&__bottom
-		width: 1075px
+		width: 1070px
 		padding: 14px 0
 		+clr
 		.copyright
@@ -161,3 +161,104 @@
 .content
 	&__in
 		+wrap
+		h1
+			padding: 37px 0 35px
+			font-size: 36px
+			font-weight: lighter
+			color: #000
+			
+
+// contacts.html
+.contacts
+	font-size: 0
+	margin-left: -50px
+	padding-bottom: 180px
+	&__wrap
+		display: inline-block
+		vertical-align: top
+		width: 413px
+		margin-left: 50px
+		&:hover
+			-webkit-box-shadow: 0px 0px 20px -5px #191919 
+			box-shadow: 0px 0px 20px -5px #191919 
+	&__title
+		background: #065D77
+		h2
+			padding: 17px 22px
+			font-size: 26px
+			font-weight: lighter
+			color: #FFF
+	&__in
+		background: #f6f6f6 url("../img/corner-contacts.png") bottom right no-repeat
+		min-height: 170px
+		padding: 30px
+		+box
+		table
+			tr
+				td
+					font-size: 13px
+					&:first-child
+						text-align: right
+						color: #6E6E6E 
+						padding-right: 20px
+					&:last-child
+						padding-bottom: 5px
+						color: #191919 
+						
+
+// project.html
+
+
+
+// projects.html
+.projects
+	position: relative
+	height: 680px
+	margin: -82px 0 25px 23px
+	background: url("../img/map-projects.png") no-repeat
+	&__marker
+		position: absolute
+		display: block
+		cursor: pointer
+		+s(marker-projects)
+		&.marker1
+			bottom: 243px
+			left: 101px
+		&.marker2
+			bottom: 299px
+			left: 144px
+		&.marker3
+			bottom: 242px
+			left: 171px
+		&.marker4
+			bottom: 330px
+			left: 177px
+		&.marker5
+			bottom: 294px
+			left: 237px
+		&.marker6
+			bottom: 246px
+			left: 293px
+		&.marker7
+			bottom: 203px
+			left: 404px
+		&.marker8
+			bottom: 182px
+			left: 615px
+		&.marker9
+			bottom: 230px
+			right: 372px
+	&__info
+		display: none
+		width: 225px
+		height: auto
+		padding: 10px
+		background: #FFF
+		z-index: 100
+		+box
+		&.is-active
+			display: block
+		&:after
+			content: ""
+			display: block
+			+arr(15, 13, #FFF, b)
