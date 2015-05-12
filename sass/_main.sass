@@ -178,6 +178,7 @@
 		vertical-align: top
 		width: 413px
 		margin-left: 50px
+		cursor: pointer
 		&:hover
 			-webkit-box-shadow: 0px 0px 20px -5px #191919 
 			box-shadow: 0px 0px 20px -5px #191919 
@@ -207,7 +208,110 @@
 						
 
 // project.html
-
+.content
+	font-size: 0
+	&__top
+		padding: 50px 0 7px
+	&__bottom
+		position: relative
+		height: 80px
+		margin-bottom: 165px
+		background: #F0F0F0 
+	&__wrap
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		color: #191919
+		font-size: 0
+		a
+			display: inline-block
+			vertical-align: top
+			width: 103px
+			height: 80px
+			+box
+			+vertical
+			&.more
+				margin-left: 80px
+				span
+					display: inline-block
+					vertical-align: middle
+					+s(more_s)
+			&:hover
+				background: #FFF
+		.project
+			width: 510px
+			h1
+				margin-top: -10px
+				padding: 0 0 29px
+				font-weight: lighter
+				font-size: 36px
+				line-height: 1.2
+				color: #000
+			span
+				display: block
+				font-weight: 800
+				font-size: 16px
+				color: #1DA2B0 
+			p
+				display: block
+				padding-bottom: 10px
+				font-size: 13px
+			h3
+				margin: 19px 0 13px
+				font-weight: lighter
+				font-size: 26px
+			table
+				td
+					vertical-align: top
+					&:first-child
+						font-size: 14px
+					&:last-child
+						padding-right: 33px
+						color: #1DA2B0
+						font-size: 16px
+						font-weight: 800
+	&__slider
+		.slider-for
+			position: relative
+			.slick-prev, .slick-next
+				position: absolute
+				top: 50%
+				font-size: 0
+				z-index: 1000
+				&:before
+					content: ""
+			.slick-prev
+				left: 30px
+				+s(prev_b)
+			.slick-next
+				right: 30px
+				+s(next_b)
+		.slider-nav
+			position: static
+			img
+				margin-left: 8px
+			.slick-prev, .slick-next
+				position: absolute
+				top: 14px
+				width: 80px
+				height: 80px
+				font-size: 0
+				z-index: 1000
+				+vertical
+				&:before
+					content: ""
+					display: inline-block
+					vertical-align: middle
+				&:hover
+					background: #FFF 
+			.slick-prev
+				left: 5px
+				&:before
+					+s(prev_s)
+			.slick-next
+				left: 185px
+				&:before
+					+s(next_s)
 
 
 // projects.html
@@ -282,38 +386,35 @@
 
 // structure.html
 .structure
-	&__in
-		+wrap
-	&__wrap
-		font-size: 0
-		margin: 0 0 95px -50px
-		.person
-			display: inline-block
-			vertical-align: top
-			width: 413px
-			margin: 0 0 50px 50px
-			background: #f6f6f6 url("../img/corner.png") bottom right no-repeat
-			cursor: pointer
-			+clr
-			&:hover
-				-webkit-box-shadow: 0px 0px 20px -5px #191919 
-				box-shadow: 0px 0px 20px -5px #191919 
-			&__img
-				float: left
-			&__info
-				overflow: hidden
-				min-height: 202px
-				padding: 25px
-				font-size: 13px
-				color: #191919
-				+box
-				h3
-					padding-bottom: 30px
-					font-weight: 600
-					span
-						display: block
-						font-size: 21px
-			&_low
-				background-image: url("../img/corner_low.png")
-			&_lowest
-				background-image: url("../img/corner_lowest.png")
+	font-size: 0
+	margin: 0 0 95px -50px
+	.person
+		display: inline-block
+		vertical-align: top
+		width: 413px
+		margin: 0 0 50px 50px
+		background: #f6f6f6 url("../img/corner.png") bottom right no-repeat
+		cursor: pointer
+		+clr
+		&:hover
+			-webkit-box-shadow: 0px 0px 20px -5px #191919 
+			box-shadow: 0px 0px 20px -5px #191919 
+		&__img
+			float: left
+		&__info
+			overflow: hidden
+			min-height: 202px
+			padding: 25px
+			font-size: 13px
+			color: #191919
+			+box
+			h3
+				padding-bottom: 30px
+				font-weight: 600
+				span
+					display: block
+					font-size: 21px
+		&_low
+			background-image: url("../img/corner_low.png")
+		&_lowest
+			background-image: url("../img/corner_lowest.png")
