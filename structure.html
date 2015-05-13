@@ -62,42 +62,44 @@
 		<div class="content__in">
 			<h1>Контакты</h1>
 			<div class="structure">
-				<div class="person">
-					<div class="person__img"><img src="img/person_1.jpg" alt=""></div>
-					<div class="person__info">
-						<h3><span>Гончаров</span> Владимир Владимирович</h3>
-						<p>Председатель совета директоров</p>
+				<div class="person js-person">
+					<div class="person__wrap">
+						<div class="person__img"><img src="img/person_1.jpg" alt=""></div>
+						<div class="person__info">
+							<h3><span>Гончаров</span> Владимир Владимирович</h3>
+							<p>Председатель совета директоров</p>
+						</div>
 					</div>
 				</div>
-				<div class="person person_low">
+				<div class="person person_low js-person">
 					<div class="person__img"><img src="img/person_2.jpg" alt=""></div>
 					<div class="person__info">
 						<h3><span>Харисов</span> Марк Гаврилович</h3>
 						<p>Генеральный директор</p>
 					</div>
 				</div>
-				<div class="person person_low">
+				<div class="person person_low js-person">
 					<div class="person__img"><img src="img/person_3.jpg" alt=""></div>
 					<div class="person__info">
 						<h3><span>Скоробагатов</span> Серафим Власович</h3>
 						<p>Заместитель генерального директора по финансово - экономической деятельности</p>
 					</div>
 				</div>
-				<div class="person person_low">
+				<div class="person person_low js-person">
 					<div class="person__img"><img src="img/person_4.jpg" alt=""></div>
 					<div class="person__info">
 						<h3><span>Гончаров</span> Афанасий Васильевич</h3>
 						<p>Заместитель генерального директора по маркетингу и развитию бизнеса</p>
 					</div>
 				</div>
-				<div class="person person_low">
+				<div class="person person_low js-person">
 					<div class="person__img"><img src="img/person_5.jpg" alt=""></div>
 					<div class="person__info">
 						<h3><span>Кашкаров</span> Альберт Савельевич</h3>
 						<p>Заместитель генерального директора по строительству</p>
 					</div>
 				</div>
-				<div class="person person_lowest">
+				<div class="person person_lowest js-person">
 					<div class="person__img"><img src="img/person_6.jpg" alt=""></div>
 					<div class="person__info">
 						<h3><span>Гордеева</span> Ефима Юпитеровна</h3>
@@ -146,6 +148,61 @@
 	<!-- END footer -->
 </div>
 <!-- END out-->
+
+<!-- BEGIN popup -->
+<div class="overlay" style="display: none;">
+	<i></i>
+	<div class="popup popup_structure">
+		<div class="person">
+			<div class="person__wrap">
+				<div class="person__img"><img src="img/person_1.jpg" alt=""></div>
+				<div class="person__info">
+					<h3><span>Гончаров</span> Владимир Владимирович</h3>
+					<p>Председатель совета директоров</p>
+				</div>
+			</div>
+			<a class="close popup-close" href="#"><span></span></a>
+		</div>
+		<div class="person person_low">
+			<div class="person__img"><img src="img/person_2.jpg" alt=""></div>
+			<div class="person__info">
+				<h3><span>Харисов</span> Марк Гаврилович</h3>
+				<p>Генеральный директор</p>
+			</div>
+		</div>
+		<div class="person person_low">
+			<div class="person__img"><img src="img/person_3.jpg" alt=""></div>
+			<div class="person__info">
+				<h3><span>Скоробагатов</span> Серафим Власович</h3>
+				<p>Заместитель генерального директора по финансово - экономической деятельности</p>
+			</div>
+		</div>
+		<div class="person person_low">
+			<div class="person__img"><img src="img/person_4.jpg" alt=""></div>
+			<div class="person__info">
+				<h3><span>Гончаров</span> Афанасий Васильевич</h3>
+				<p>Заместитель генерального директора по маркетингу и развитию бизнеса</p>
+			</div>
+		</div>
+		<div class="person person_low">
+			<div class="person__img"><img src="img/person_5.jpg" alt=""></div>
+			<div class="person__info">
+				<h3><span>Кашкаров</span> Альберт Савельевич</h3>
+				<p>Заместитель генерального директора по строительству</p>
+			</div>
+		</div>
+		<div class="person person_lowest">
+			<div class="person__img"><img src="img/person_6.jpg" alt=""></div>
+			<div class="person__info">
+				<h3><span>Гордеева</span> Ефима Юпитеровна</h3>
+				<p>Главный бухгалтер</p>
+			</div>
+		</div>
+		<a class="close popup-close" href="#"><span></span></a>
+	</div>
+</div>
+<!-- END popup -->
+
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

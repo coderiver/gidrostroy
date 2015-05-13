@@ -169,13 +169,14 @@
 			
 
 // contacts.html
-.contacts
+.offices
 	font-size: 0
 	margin-left: -50px
 	padding-bottom: 180px
+.office
+	display: inline-block
+	vertical-align: top
 	&__wrap
-		display: inline-block
-		vertical-align: top
 		width: 413px
 		margin-left: 50px
 		cursor: pointer
@@ -212,8 +213,10 @@
 	font-size: 0
 	&__top
 		padding: 50px 0 7px
-	&__bottom
+	&__inner
 		position: relative
+		+wrap
+	&__bottom
 		height: 80px
 		margin-bottom: 165px
 		background: #F0F0F0 
@@ -226,18 +229,27 @@
 		a
 			display: inline-block
 			vertical-align: top
-			width: 103px
+			width: 80px
 			height: 80px
+			cursor: default
 			+box
 			+vertical
-			&.more
-				margin-left: 80px
+			span
+				display: inline-block
+				vertical-align: middle
+			&.prev
 				span
-					display: inline-block
-					vertical-align: middle
+					+s(prev_s)
+			&.more
+				width: 103px
+				cursor: pointer
+				span
 					+s(more_s)
-			&:hover
-				background: #FFF
+				&:hover
+					background: #FFF
+			&.next
+				span
+					+s(next_s)
 		.project
 			width: 510px
 			h1
@@ -290,6 +302,10 @@
 			position: static
 			img
 				margin-left: 8px
+				&:first-child
+					margin-left: 0
+				&.slick-active:focus
+					opacity: 0.5
 			.slick-prev, .slick-next
 				position: absolute
 				top: 14px
@@ -305,11 +321,11 @@
 				&:hover
 					background: #FFF 
 			.slick-prev
-				left: 5px
+				left: 0
 				&:before
 					+s(prev_s)
 			.slick-next
-				left: 185px
+				left: 183px
 				&:before
 					+s(next_s)
 
@@ -418,3 +434,68 @@
 			background-image: url("../img/corner_low.png")
 		&_lowest
 			background-image: url("../img/corner_lowest.png")
+
+
+// popup
+.overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	padding: 98px 0 0
+	z-index: 999
+	i
+		position: fixed
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background: rgba(#FFF, 0.75)
+	&:before
+		content: ""
+		display: inline-block
+		width: 0
+
+.popup
+	position: relative
+	background: #fff 
+	display: none
+	box-shadow: 0 0 19px 2px #000 
+	&.is-visible
+		display: inline-block
+	&_contacts
+		margin: 0 auto
+
+.close
+	display: none
+	position: absolute
+	top: 0
+	right: 0
+	padding: 25px
+	span
+		-webkit-transform: rotateZ(45deg)
+		-moz-transform: rotateZ(45deg)
+		-ms-transform: rotateZ(45deg)
+		-o-transform: rotateZ(45deg)
+		transform: rotateZ(45deg)
+	span,
+	span:before,
+	span:after 
+		position: absolute
+		top: 19px
+		right: 23px
+		width: 1px
+		height: 15px
+		background: #fafafa
+	span:before,
+	span:after 
+		content: ''
+		display: inline-block
+		position: absolute
+		top: 7px
+		left: -7px
+		width: 7px
+		height: 1px
+	span:after
+		left: 1px
