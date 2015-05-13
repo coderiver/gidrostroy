@@ -101,8 +101,8 @@ a.mail { color: #218da4; }
 .content__wrap a:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .content__wrap a span { display: inline-block; vertical-align: middle; }
 .content__wrap a.prev span { background: url('../img/icons-se7c4265a7d.png') 0 -248px no-repeat; width: 17px; height: 31px; }
-.content__wrap a.more { width: 103px; cursor: pointer; }
-.content__wrap a.more span { background: url('../img/icons-se7c4265a7d.png') 0 -83px no-repeat; width: 38px; height: 32px; }
+.content__wrap a.more { width: 150px; cursor: pointer; }
+.content__wrap a.more span { font-size: 16px; font-weight: 800; color: #1da2b0; }
 .content__wrap a.more:hover { background: white; }
 .content__wrap a.next span { background: url('../img/icons-se7c4265a7d.png') 0 -166px no-repeat; width: 17px; height: 31px; }
 .content__wrap .project { width: 510px; }
@@ -128,7 +128,7 @@ a.mail { color: #218da4; }
 .content__slider .slider-nav .slick-prev:hover, .content__slider .slider-nav .slick-next:hover { background: white; }
 .content__slider .slider-nav .slick-prev { left: 0; }
 .content__slider .slider-nav .slick-prev:before { background: url('../img/icons-se7c4265a7d.png') 0 -248px no-repeat; width: 17px; height: 31px; }
-.content__slider .slider-nav .slick-next { left: 183px; }
+.content__slider .slider-nav .slick-next { left: 230px; }
 .content__slider .slider-nav .slick-next:before { background: url('../img/icons-se7c4265a7d.png') 0 -166px no-repeat; width: 17px; height: 31px; }
 
 .projects { position: relative; height: 680px; margin: -82px 0 25px 23px; background: url("../img/map-projects.png") no-repeat; }
@@ -164,7 +164,7 @@ a.mail { color: #218da4; }
 .overlay:before { content: ""; display: inline-block; width: 0; }
 
 .popup { position: relative; background: white; display: none; box-shadow: 0 0 19px 2px black; }
-.popup.is-visible { display: inline-block; }
+.popup.is-visible { display: block; }
 .popup_contacts { margin: 0 auto; }
 
 .close { display: none; position: absolute; top: 0; right: 0; padding: 25px; }

@@ -22,6 +22,26 @@ head.ready(function() {
 		$('.popup').removeClass('is-visible');
 		return false;
 	});
+
+	// popup-map
+	function initialize_0() {
+	  var mapOptions_0 = {
+	    zoom: 4,
+	    center: new google.maps.LatLng(61.246869, 73.413953)
+	  }
+	  var map_0 = new google.maps.Map(document.getElementById('map-canvas'),
+	                                mapOptions_0);
+
+	  var image = 'images/beachflag.png';
+	  var myLatLng = new google.maps.LatLng(61.246869, 73.413953);
+	  var beachMarker = new google.maps.Marker({
+	      position: myLatLng,
+	      map: map,
+	      icon: image
+	  });
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize_0);
 	
 	// project.html slider
 	$('.slider-for').slick({
