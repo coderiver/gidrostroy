@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
 </head>
 <body>
 <!-- BEGIN  out-->
@@ -62,7 +63,7 @@
 		<div class="content__in">
 			<h1>Контакты</h1>
 			<div class="offices">
-				<div class="office office_1 js-office">
+				<div class="office js-office-1">
 					<div class="office__wrap">
 						<div class="office__title">
 							<h2>Главный офис</h2>
@@ -89,7 +90,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="office office_1 js-office">
+				<div class="office js-office-2">
 					<div class="office__wrap">
 						<div class="office__title">
 							<h2>Офис в Москве</h2>
@@ -116,7 +117,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="office office_1 js-office">
+				<div class="office js-office-3">
 					<div class="office__wrap">
 						<div class="office__title">
 							<h2>Офис в Самаре</h2>
@@ -189,8 +190,8 @@
 <!-- BEGIN popup -->
 <div class="overlay" style="display: none;">
 	<i></i>
-	<div class="popup popup_contacts">
-		<div class="office office_1">
+	<div id="office-1" class="popup">
+		<div class="office">
 			<div class="office__wrap">
 				<div class="office__title">
 					<h2>Главный офис</h2>
@@ -218,9 +219,11 @@
 					</table>
 				</div>
 			</div>
-			<div class="map-office"></div>
+			<div id="map-office-1" class="map-office"></div>
 		</div>
-		<div class="office office_2">
+	</div>
+	<div id="office-2" class="popup">
+		<div class="office">
 			<div class="office__wrap">
 				<div class="office__title">
 					<h2>Офис в Москве</h2>
@@ -248,8 +251,11 @@
 					</table>
 				</div>
 			</div>
+			<div id="map-office-2" class="map-office"></div>
 		</div>
-		<div class="office office_3">
+	</div>
+	<div id="office-3" class="popup">
+		<div class="office">
 			<div class="office__wrap">
 				<div class="office__title">
 					<h2>Офис в Самаре</h2>
@@ -277,6 +283,7 @@
 					</table>
 				</div>
 			</div>
+			<div id="map-office-3" class="map-office"></div>
 		</div>
 	</div>
 </div>

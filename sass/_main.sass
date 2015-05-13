@@ -176,7 +176,10 @@
 .office
 	display: inline-block
 	vertical-align: top
+	font-size: 0
 	&__wrap
+		display: inline-block
+		vertical-align: top
 		width: 413px
 		margin-left: 50px
 		cursor: pointer
@@ -184,6 +187,7 @@
 			-webkit-box-shadow: 0px 0px 20px -5px #191919 
 			box-shadow: 0px 0px 20px -5px #191919 
 	&__title
+		position: relative
 		background: #065D77
 		h2
 			padding: 17px 22px
@@ -406,36 +410,40 @@
 .structure
 	font-size: 0
 	margin: 0 0 95px -50px
-	.person
-		display: inline-block
-		vertical-align: top
-		width: 413px
-		margin: 0 0 50px 50px
+.person
+	display: inline-block
+	vertical-align: top
+	width: 413px
+	margin: 0 0 50px 50px
+	cursor: pointer
+	font-size: 0
+	+clr
+	&:hover
+		-webkit-box-shadow: 0px 0px 20px -5px #191919 
+		box-shadow: 0px 0px 20px -5px #191919 
+	&__wrap
 		background: #f6f6f6 url("../img/corner.png") bottom right no-repeat
-		cursor: pointer
-		+clr
-		&:hover
-			-webkit-box-shadow: 0px 0px 20px -5px #191919 
-			box-shadow: 0px 0px 20px -5px #191919 
-		&__img
-			float: left
-		&__info
-			overflow: hidden
-			min-height: 202px
-			padding: 25px
-			font-size: 13px
-			color: #191919
-			+box
-			h3
-				padding-bottom: 30px
-				font-weight: 600
-				span
-					display: block
-					font-size: 21px
-		&_low
+	&_low
+		.person__wrap
 			background-image: url("../img/corner_low.png")
-		&_lowest
+	&_lowest
+		.person__wrap
 			background-image: url("../img/corner_lowest.png")
+	&__img
+		float: left
+	&__info
+		overflow: hidden
+		min-height: 202px
+		padding: 25px
+		font-size: 13px
+		color: #191919
+		+box
+		h3
+			padding-bottom: 30px
+			font-weight: 600
+			span
+				display: block
+				font-size: 21px
 
 
 // popup
@@ -447,6 +455,10 @@
 	left: 0
 	padding: 98px 0 0
 	z-index: 999
+	-ms-overflow-y: auto
+	overflow-y: auto
+	text-align: center
+	+box
 	i
 		position: fixed
 		top: 0
@@ -461,20 +473,59 @@
 
 .popup
 	position: relative
-	background: #fff 
 	display: none
-	box-shadow: 0 0 19px 2px #000 
+	box-shadow: 0 0 20px -2px #000 
 	&.is-visible
-		display: block
-	&_contacts
-		margin: 0 auto
+		display: inline-block
+	> .office 
+		margin: 0
+		> .office__wrap
+			margin-left: 0
+			cursor: default
+			text-align: left
+			border-right: 1px dashed #d6d6d6 
+			&:hover
+				-webkit-box-shadow: none 
+				box-shadow: none
+			> .office__in
+				padding: 20px
+				height: 585px
+				img
+					margin-bottom: 25px
+	&_person
+		background: #FFF
+		margin-top: 70px
+		> .person
+			margin: 0
+			cursor: default
+			text-align: left
+			&:hover
+				-webkit-box-shadow: none 
+				box-shadow: none
+			&__wrap
+				border-bottom: 1px dashed #d6d6d6 
 
+.person-close
+	position: absolute
+	top: 0
+	right: -70px
+	width: 70px
+	height: 70px
+	background: #065D77 
+	+box
+	> .close
+		position: static
+		display: block
+		padding: 35px
+		span,
+		span:before,
+		span:after 
+			right: 34px
 .close
-	display: none
 	position: absolute
 	top: 0
 	right: 0
-	padding: 25px
+	padding: 35px 44px
 	span
 		-webkit-transform: rotateZ(45deg)
 		-moz-transform: rotateZ(45deg)
@@ -485,19 +536,60 @@
 	span:before,
 	span:after 
 		position: absolute
-		top: 19px
-		right: 23px
+		top: 16px
+		right: 43px
 		width: 1px
-		height: 15px
+		height: 38px
 		background: #fafafa
 	span:before,
 	span:after 
 		content: ''
 		display: inline-block
 		position: absolute
-		top: 7px
-		left: -7px
-		width: 7px
+		top: 19px
+		left: -19px
+		width: 19px
 		height: 1px
 	span:after
 		left: 1px
+	
+.map-office
+	width: 930px
+	height: 655px
+	display: inline-block
+	vertical-align: top
+	
+.person
+	&__inner
+		height: 380px
+		padding: 25px
+		+box
+		p
+			font-size: 13px
+			color: #191919
+			padding-bottom: 5px
+			&:last-child
+				padding-bottom: 0
+			
+// scrollbar
+div.mCSB_scrollTools
+	width: 4px
+	opacity: 1
+	.mCSB_draggerRail
+		width: 4px
+		background: #EBEBEB 
+		-webkit-border-radius: 0
+		-moz-border-radius: 0
+		border-radius: 0
+	.mCSB_dragger .mCSB_dragger_bar
+		width: 4px
+		background: #065D77 
+		-webkit-border-radius: 0
+		-moz-border-radius: 0
+		border-radius: 0
+	.mCSB_dragger:hover .mCSB_dragger_bar
+		background: #065D77
+	&.mCSB_scrollTools_onDrag
+		background: #065D77
+	.mCSB_dragger_onDrag
+		background: #065D77
