@@ -131,6 +131,13 @@ head.ready(function() {
 
 	google.maps.event.addDomListener(window, 'load', initialize_3);
 	
+	// index.html slider
+	$('.company__slider').slick({
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 1
+	});
+
 	// project.html slider
 	$('.slider-for').slick({
 		slidesToShow: 1,

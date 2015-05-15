@@ -168,6 +168,161 @@
 			color: #000
 			
 
+// index.html
+.main
+	font-size: 0
+	h1
+		display: block
+		margin: 45px 45px 30px
+		font-weight: lighter
+		font-size: 36px
+		color: #000
+	&__top
+		> .main__wrap
+			background: #001d30
+			h1
+				color: #FFF
+	&__bottom
+		background: #ececec
+		border-bottom: 1px solid #e1e1e1
+		a
+			display: inline-block
+			margin: 30px 45px
+			font-size: 13px
+			color: #1da2b0
+			&:hover
+				text-decoration: underline
+		> .main__wrapper
+			width: percentage(959/1440)
+			background: url(../img/main-projects-bg.jpg)
+			+cover
+			border-left: 1px dashed #d6d6d6
+	&__wrapper
+		display: inline-block
+		vertical-align: top
+		width: percentage(960/1440)
+		min-height: 530px
+		height: 100%
+		.company
+			position: relative
+			min-height: 530px
+			height: 100%
+			background: url(../img/main-top-bg.jpg)
+			+cover
+			&__slider
+				position: absolute
+				right: 0
+				bottom: 0
+				left: 0
+				height: 160px
+				padding: 0 75px
+				background-color: rgba(0, 0, 0, 0.6)
+				text-align: center
+				.slide
+					padding-top: 25px
+					span
+						display: inline-block
+						vertical-align: middle
+						padding-bottom: 10px
+					p
+						font-weight: 600
+						font-size: 15px
+						color: #FFF
+					&.slide_1
+						span
+							+s(company_1)
+					&.slide_2
+						span
+							+s(company_2)
+					&.slide_3
+						span
+							+s(company_3)
+					&.slide_4
+						span
+							+s(company_4)
+					&.slide_5
+						span
+							+s(company_5)
+				.slick-prev:before, .slick-next:before
+					content: ""
+				.slick-prev
+					left: 30px
+					+s(prev_b)
+				.slick-next
+					right: 20px
+					+s(next_b)
+		.projects
+			height: 490px
+			margin: -40px 45px 0
+	&__wrap
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: percentage(480/1440)
+		min-height: 530px
+		height: 100%
+		p
+			padding: 0 45px
+			font-size: 13px
+			color: #FFF
+		.btns
+			position: absolute
+			right: 0
+			bottom: 0
+			left: 0
+			.btn
+				width: 100%
+				height: 80px
+				+vertical
+				text-align: left
+				&_video
+					background: #1db8c1
+					a
+						span
+							+s(btn_1)
+				&_publications
+					background: #249190
+					a
+						span
+							+s(btn_2)
+				&_presentations
+					background: #0a6a86
+					a
+						span
+							+s(btn_3)
+				a
+					display: inline-block
+					vertical-align: middle
+					padding: 0 45px
+					font-size: 30px
+					font-weight: lighter
+					color: #FFF
+					+box
+					span
+						display: inline-block
+						vertical-align: middle
+						margin-right: 25px
+		.clients
+			width: 100%
+			ul
+				display: block
+				padding: 0 20px
+				margin-left: -20px
+				text-align: center
+				li
+					display: inline-block
+					vertical-align: top
+					width: 135px
+					margin: 10px 0 10px 20px
+					font-size: 0
+					img
+						padding-bottom: 10px
+					p
+						padding: 0
+						font-size: 13px
+						color: #414141
+
+
 // contacts.html
 .offices
 	font-size: 0
@@ -342,6 +497,7 @@
 	height: 680px
 	margin: -82px 0 25px 23px
 	background: url("../img/map-projects.png") no-repeat
+	background-size: 100%
 	&__marker
 		position: absolute
 		display: block
