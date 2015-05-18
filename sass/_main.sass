@@ -158,13 +158,12 @@
 // contacts.html
 .offices
 	font-size: 0
-	margin-left: -50px
-	padding-bottom: 180px
+	margin-left: percentage(-50/1440)
 .office
 	display: inline-block
 	vertical-align: top
 	width: percentage(413/1390)
-	margin: 0 0 50px 50px
+	margin: 0 0 percentage(50/1440) percentage(50/1440)
 	font-size: 0
 	cursor: pointer
 	&__wrap
@@ -448,12 +447,11 @@
 	bottom: 0
 	right: 0
 	left: 0
-	padding: 98px 0 0
 	z-index: 999
 	-ms-overflow-y: auto
 	overflow-y: auto
-	text-align: center
 	+box
+	+vertical
 	i
 		position: fixed
 		top: 0
@@ -472,6 +470,7 @@
 	box-shadow: 0 0 20px -2px #000 
 	&.is-visible
 		display: inline-block
+		vertical-align: middle
 	> .office 
 		min-width: 1340px
 		margin: 0

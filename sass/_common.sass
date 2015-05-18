@@ -22,7 +22,7 @@ a
 // header
 .header
 	&__top
-		padding: 0 35px 0 50px
+		padding: 0 percentage(35/1440) 0 percentage(50/1440)
 		+clr
 		.logo
 			float: left
@@ -39,7 +39,7 @@ a
 				margin-top: 24px
 				text-align: right
 				font-weight: lighter
-				padding-left: 17px
+				padding-left: percentage(17/1440)
 				a
 					display: block
 					&.phone
@@ -56,7 +56,7 @@ a
 						padding-top: 11px
 				&.bober
 					margin: 25px 0 10px
-					padding-left: 45px
+					padding-left: percentage(45/1440)
 	&__bottom
 		background: #0A6A86
 		overflow: hidden
@@ -64,10 +64,10 @@ a
 		nav
 			float: left
 			width: percentage(860/1440)
-			margin-left: 50px
+			margin-left: percentage(50/1440)
 			font-size: 0
 			ul
-				margin-left: -30px
+				margin-left: percentage(-30/1440)
 				font-size: 0
 				+clr
 				li
@@ -78,14 +78,17 @@ a
 					a
 						display: block
 						margin-top: -15px
-						padding: 22px 35px
+						padding: 22px 16%
 						font-weight: lighter
 						font-size: 18px
 						color: #FFF
+						+box
 						&:hover
 							background: #065d77
 						&.is-active
 							background: #065d77
+						+r(1360)
+							font-size: 16px
 		.search
 			float: left
 			width: percentage(397/1440)
@@ -93,21 +96,21 @@ a
 			label
 				position: relative
 				display: inline-block
-				margin: 16px 0
-				&:after
-					content: ""
-					position: absolute
-					top: 6px
-					right: 12px
-					+s(search)
+				width: 240px
+				margin: 16px auto
 				input
-					width: 240px
+					width: 100%
 					height: 37px
-					padding: 10px 40px 10px 10px
+					padding: 10px percentage(40/1440) 10px percentage(10/1440)
 					border: 1px solid #33839a
 					background: #065d77
 					color: #FFF
 					+box
+				button
+					position: absolute
+					top: 6px
+					right: 12px
+					+s(search)
 	&__lang
 		float: right
 		width: percentage(133/1440)
@@ -120,6 +123,7 @@ a
 			&:hover
 				border-bottom: 1px dashed #FFF
 
+
 // footer
 .footer
 	background: url("../img/corner-f.png") bottom right no-repeat
@@ -127,7 +131,8 @@ a
 	-o-background-size: auto 100%
 	background-size: auto 100%
 	overflow: visible
-	padding: 10px 200px 0 50px
+	height: 100px
+	padding: 10px percentage(200/1440) 0 percentage(50/1440)
 	&__top
 		font-size: 0
 	&__logo
@@ -136,7 +141,8 @@ a
 	&__menu
 		display: inline-block
 		vertical-align: top
-		margin-left: 25px
+		width: percentage(1080/1440) 
+		margin-left: percentage(20/1440)
 		li
 			display: inline-block
 			vertical-align: top
@@ -146,7 +152,7 @@ a
 				border: none
 			a
 				display: block
-				padding: 5px 16px
+				padding: 10px 10%
 				font-weight: lighter
 				font-size: 16px
 				color: #686868 
@@ -155,21 +161,21 @@ a
 					vertical-align: top
 					color: #000
 					font-size: 15px
-					padding: 10px 2px 10px 33px 
+					padding: 10px 1% 10px 5% 
 				&.mail
 					display: inline-block
 					vertical-align: top
 					font-size: 15px 
-					padding: 10px
+					padding: 10px 3%
 				&:hover
 					color: darken(#686868, 100%)
 	&__bottom
-		width: 1070px
+		width: percentage(1070/1440)
 		padding: 14px 0
 		+clr
 		.copyright
 			float: left
-			padding-right: 20px
+			padding-right: percentage(20/1440)
 		.made-by
 			float: left
 		.sitemap
@@ -178,11 +184,19 @@ a
 			color: #AFAFAF
 		a
 			color: #218DA4 
-		
+
+.out
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin-bottom: -100px		
+
+.push
+	height: 100px
 
 .content
 	&__in
-		padding: 0 50px
+		padding: 0 percentage(50/1440)
 	h1
 		padding: 37px 0 35px
 		font-size: 36px
