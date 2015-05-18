@@ -1,171 +1,5 @@
 // Normally mainpage styles
 
-// header
-.header
-	&__top
-		padding: 0 35px 0 50px
-		+clr
-		.logo
-			float: left
-			margin: 20px 0 23px
-			a
-				display: block
-				font-size: 0
-		.tools
-			float: right
-			font-size: 0
-			&__in
-				display: inline-block
-				vertical-align: top
-				margin-top: 24px
-				text-align: right
-				font-weight: lighter
-				padding-left: 17px
-				a
-					display: block
-					&.phone
-						font-size: 26px
-					&.mail
-						margin-top: -6px
-						font-size: 13px 
-				p
-					display: block
-					padding-top: 1px
-					text-align: left
-					font-size: 13px
-					&:first-child
-						padding-top: 11px
-				&.bober
-					margin: 25px 0 10px
-					padding-left: 45px
-	&__bottom
-		padding: 0 0 0 50px
-		background: #0A6A86
-		overflow: hidden
-		+clr
-		nav
-			float: left
-			font-size: 0
-			&.menu
-				ul
-					margin-left: -30px
-					font-size: 0
-					li
-						display: inline-block
-						vertical-align: middle
-						height: 40px
-						border-right: 1px solid #33839a
-						margin: 15px 0
-						&:last-child
-							border: none
-						a
-							display: block
-							margin-top: -15px
-							padding: 21px 30px
-							font-weight: lighter
-							font-size: 18px
-							color: #FFF
-							&:hover
-								background: #065d77
-							&.is-active
-								background: #065d77
-						.search
-							position: relative
-							display: block
-							margin: 0 60px
-							&:after
-								content: ""
-								position: absolute
-								top: 6px
-								right: 12px
-								+s(search)
-							input
-								width: 240px
-								height: 37px
-								padding: 10px 40px 10px 10px
-								border: 1px solid #33839a
-								background: #065d77
-								color: #FFF
-								+box
-	&__lang
-		float: right
-		background: #1db8c1
-		padding: 26px 37px
-		a
-			color: #FFF
-			font-size: 13px
-			&:hover
-				border-bottom: 1px dashed #FFF
-
-// footer
-.footer
-	background: url("../img/corner-f.png") bottom right no-repeat
-	-webkit-background-size: auto 100%
-	-o-background-size: auto 100%
-	background-size: auto 100%
-	overflow: visible
-	padding: 10px 200px 0 50px
-	&__top
-		font-size: 0
-	&__logo
-		display: inline-block
-		vertical-align: top
-	&__menu
-		display: inline-block
-		vertical-align: top
-		margin-left: 25px
-		li
-			display: inline-block
-			vertical-align: top
-			margin-top: 7px
-			border-right: 1px solid #ECECEC 
-			&:last-child
-				border: none
-			a
-				display: block
-				padding: 5px 16px
-				font-weight: lighter
-				font-size: 16px
-				color: #686868 
-				&.phone
-					display: inline-block
-					vertical-align: top
-					color: #000
-					font-size: 15px
-					padding: 10px 2px 10px 33px 
-				&.mail
-					display: inline-block
-					vertical-align: top
-					font-size: 15px 
-					padding: 10px
-				&:hover
-					color: darken(#686868, 100%)
-	&__bottom
-		width: 1070px
-		padding: 14px 0
-		+clr
-		.copyright
-			float: left
-			padding-right: 20px
-		.made-by
-			float: left
-		.sitemap
-			float: right
-		p
-			color: #AFAFAF
-		a
-			color: #218DA4 
-		
-
-.content
-	padding: 0 50px
-	h1
-		padding: 37px 0 35px
-		font-size: 36px
-		font-weight: lighter
-		color: #000
-			
-
 // index.html
 .main
 	font-size: 0
@@ -329,13 +163,14 @@
 .office
 	display: inline-block
 	vertical-align: top
+	width: percentage(413/1390)
+	margin: 0 0 50px 50px
 	font-size: 0
+	cursor: pointer
 	&__wrap
 		display: inline-block
 		vertical-align: top
-		width: 413px
-		margin-left: 50px
-		cursor: pointer
+		width: 100%
 		&:hover
 			-webkit-box-shadow: 0px 0px 20px -5px #191919 
 			box-shadow: 0px 0px 20px -5px #191919 
@@ -374,6 +209,7 @@
 		position: relative
 	&__bottom
 		height: 80px
+		padding: 0 50px
 		margin-bottom: 165px
 		background: #F0F0F0 
 	&__wrap
@@ -567,7 +403,7 @@
 .person
 	display: inline-block
 	vertical-align: top
-	width: 413px
+	width: percentage(413/1390)
 	margin: 0 0 50px 50px
 	cursor: pointer
 	font-size: 0
@@ -577,6 +413,7 @@
 		box-shadow: 0px 0px 20px -5px #191919 
 	&__wrap
 		background: #f6f6f6 url("../img/corner.png") bottom right no-repeat
+		+clr
 	&_low
 		.person__wrap
 			background-image: url("../img/corner_low.png")
@@ -585,8 +422,12 @@
 			background-image: url("../img/corner_lowest.png")
 	&__img
 		float: left
+		margin-right: 25px
+		width: percentage(174/413)
+		img
+			width: 100%
 	&__info
-		overflow: hidden
+		width: percentage(239/413)
 		min-height: 202px
 		padding: 25px
 		font-size: 13px
@@ -632,10 +473,12 @@
 	&.is-visible
 		display: inline-block
 	> .office 
+		min-width: 1340px
 		margin: 0
+		cursor: default
 		> .office__wrap
+			width: percentage(409/1340)
 			margin-left: 0
-			cursor: default
 			text-align: left
 			border-right: 1px dashed #d6d6d6 
 			&:hover
@@ -708,7 +551,7 @@
 		left: 1px
 	
 .map-office
-	width: 930px
+	width: percentage(930/1340)
 	height: 655px
 	display: inline-block
 	vertical-align: top

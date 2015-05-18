@@ -1,5 +1,5 @@
-
 body
+	min-width: 1000px
 	font-family: 'Open Sans', sans-serif
 	font-size: 12px 
 	line-height: 1.4
@@ -11,11 +11,181 @@ body
 		bottom: 0
 		left: 0
 
-
-// common blocks    
-	
 a
 	text-decoration: none
 	color: #000   
 	&.mail
 		color: #218DA4
+
+// common blocks    	
+
+// header
+.header
+	&__top
+		padding: 0 35px 0 50px
+		+clr
+		.logo
+			float: left
+			margin: 20px 0 23px
+			a
+				display: block
+				font-size: 0
+		.tools
+			float: right
+			font-size: 0
+			&__in
+				display: inline-block
+				vertical-align: top
+				margin-top: 24px
+				text-align: right
+				font-weight: lighter
+				padding-left: 17px
+				a
+					display: block
+					&.phone
+						font-size: 26px
+					&.mail
+						margin-top: -6px
+						font-size: 13px 
+				p
+					display: block
+					padding-top: 1px
+					text-align: left
+					font-size: 13px
+					&:first-child
+						padding-top: 11px
+				&.bober
+					margin: 25px 0 10px
+					padding-left: 45px
+	&__bottom
+		background: #0A6A86
+		overflow: hidden
+		+clr
+		nav
+			float: left
+			width: percentage(860/1440)
+			margin-left: 50px
+			font-size: 0
+			ul
+				margin-left: -30px
+				font-size: 0
+				+clr
+				li
+					float: left
+					height: 39px
+					border-right: 1px solid #33839a
+					margin: 15px 0
+					a
+						display: block
+						margin-top: -15px
+						padding: 22px 35px
+						font-weight: lighter
+						font-size: 18px
+						color: #FFF
+						&:hover
+							background: #065d77
+						&.is-active
+							background: #065d77
+		.search
+			float: left
+			width: percentage(397/1440)
+			text-align: center
+			label
+				position: relative
+				display: inline-block
+				margin: 16px 0
+				&:after
+					content: ""
+					position: absolute
+					top: 6px
+					right: 12px
+					+s(search)
+				input
+					width: 240px
+					height: 37px
+					padding: 10px 40px 10px 10px
+					border: 1px solid #33839a
+					background: #065d77
+					color: #FFF
+					+box
+	&__lang
+		float: right
+		width: percentage(133/1440)
+		background: #1db8c1
+		padding: 26px 0
+		text-align: center
+		a
+			color: #FFF
+			font-size: 13px
+			&:hover
+				border-bottom: 1px dashed #FFF
+
+// footer
+.footer
+	background: url("../img/corner-f.png") bottom right no-repeat
+	-webkit-background-size: auto 100%
+	-o-background-size: auto 100%
+	background-size: auto 100%
+	overflow: visible
+	padding: 10px 200px 0 50px
+	&__top
+		font-size: 0
+	&__logo
+		display: inline-block
+		vertical-align: top
+	&__menu
+		display: inline-block
+		vertical-align: top
+		margin-left: 25px
+		li
+			display: inline-block
+			vertical-align: top
+			margin-top: 7px
+			border-right: 1px solid #ECECEC 
+			&:last-child
+				border: none
+			a
+				display: block
+				padding: 5px 16px
+				font-weight: lighter
+				font-size: 16px
+				color: #686868 
+				&.phone
+					display: inline-block
+					vertical-align: top
+					color: #000
+					font-size: 15px
+					padding: 10px 2px 10px 33px 
+				&.mail
+					display: inline-block
+					vertical-align: top
+					font-size: 15px 
+					padding: 10px
+				&:hover
+					color: darken(#686868, 100%)
+	&__bottom
+		width: 1070px
+		padding: 14px 0
+		+clr
+		.copyright
+			float: left
+			padding-right: 20px
+		.made-by
+			float: left
+		.sitemap
+			float: right
+		p
+			color: #AFAFAF
+		a
+			color: #218DA4 
+		
+
+.content
+	&__in
+		padding: 0 50px
+	h1
+		padding: 37px 0 35px
+		font-size: 36px
+		font-weight: lighter
+		color: #000
+			
