@@ -4,8 +4,8 @@
 .main
 	font-size: 0
 	h1
-		display: block
-		margin: 45px 45px 30px
+		display: inline-block
+		margin: 30px percentage(30/480) 15px
 		font-weight: lighter
 		font-size: 36px
 		color: #000
@@ -19,13 +19,13 @@
 		border-bottom: 1px solid #e1e1e1
 		a
 			display: inline-block
-			margin: 30px 45px
+			margin: 30px percentage(30/480)
 			font-size: 13px
 			color: #1da2b0
 			&:hover
 				text-decoration: underline
 		> .main__wrapper
-			width: percentage(959/1440)
+			width: percentage(958/1440)
 			background: url(../img/main-projects-bg.jpg)
 			+cover
 			border-left: 1px dashed #d6d6d6
@@ -47,7 +47,7 @@
 				bottom: 0
 				left: 0
 				height: 160px
-				padding: 0 75px
+				padding: 0 percentage(75/960)
 				background-color: rgba(0, 0, 0, 0.6)
 				text-align: center
 				.slide
@@ -85,7 +85,7 @@
 					+s(next_b)
 		.projects
 			height: 490px
-			margin: -40px 45px 0
+			margin: 0 percentage(45/959)
 	&__wrap
 		position: relative
 		display: inline-block
@@ -94,7 +94,7 @@
 		min-height: 530px
 		height: 100%
 		p
-			padding: 0 45px
+			padding: 0 percentage(30/480)
 			font-size: 13px
 			color: #FFF
 		.btns
@@ -111,48 +111,59 @@
 					background: #1db8c1
 					a
 						span
+							top: 11px
+							left: -56px
 							+s(btn_1)
 				&_publications
 					background: #249190
 					a
 						span
+							top: 5px
+							left: -53px
 							+s(btn_2)
 				&_presentations
 					background: #0a6a86
 					a
 						span
+							top: 5px
+							left: -59px
 							+s(btn_3)
 				a
+					position: relative
 					display: inline-block
 					vertical-align: middle
-					padding: 0 45px
+					margin: 0 0 0 percentage(115/480)
 					font-size: 30px
 					font-weight: lighter
 					color: #FFF
 					+box
 					span
-						display: inline-block
-						vertical-align: middle
-						margin-right: 25px
+						position: absolute
+					&:hover
+						border-bottom: 1px dashed #FFF
 		.clients
 			width: 100%
 			ul
 				display: block
-				padding: 0 20px
-				margin-left: -20px
+				padding: 0 percentage(20/1440)
+				margin-left: percentage(-20/1440)
 				text-align: center
 				li
 					display: inline-block
 					vertical-align: top
-					width: 135px
-					margin: 10px 0 10px 20px
+					width: percentage(137/480)
+					margin-left: percentage(20/480)
 					font-size: 0
-					img
-						padding-bottom: 10px
 					p
 						padding: 0
 						font-size: 13px
 						color: #414141
+			&__img
+				height: 95px
+				padding: 10px 0
+				img
+					display: inline-block
+					vertical-align: bottom
 
 
 // contacts.html
@@ -398,12 +409,12 @@
 // structure.html
 .structure
 	font-size: 0
-	margin: 0 0 95px -50px
+	margin: 0 0 0 percentage(-50/1440)
 .person
 	display: inline-block
 	vertical-align: top
 	width: percentage(413/1390)
-	margin: 0 0 50px 50px
+	margin: 0 0 50px percentage(50/1440)
 	cursor: pointer
 	font-size: 0
 	+clr
@@ -411,6 +422,7 @@
 		-webkit-box-shadow: 0px 0px 20px -5px #191919 
 		box-shadow: 0px 0px 20px -5px #191919 
 	&__wrap
+		font-size: 0
 		background: #f6f6f6 url("../img/corner.png") bottom right no-repeat
 		+clr
 	&_low
@@ -421,14 +433,13 @@
 			background-image: url("../img/corner_lowest.png")
 	&__img
 		float: left
-		margin-right: 25px
-		width: percentage(174/413)
-		img
+		img 
 			width: 100%
+			height: auto
 	&__info
-		width: percentage(239/413)
+		overflow: hidden
 		min-height: 202px
-		padding: 25px
+		padding: 25px percentage(25/413)
 		font-size: 13px
 		color: #191919
 		+box
@@ -490,8 +501,9 @@
 					margin-bottom: 25px
 	&_person
 		background: #FFF
-		margin-top: 70px
+		width: 413px
 		> .person
+			width: 100%
 			margin: 0
 			cursor: default
 			text-align: left

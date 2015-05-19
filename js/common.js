@@ -74,62 +74,62 @@ head.ready(function() {
 	$(".person__inner").mCustomScrollbar();
 
 	// popup-map
-	function initialize_1() {
-	  var mapOptions_1 = {
-	    zoom: 16,
-	    center: new google.maps.LatLng(61.246869, 73.413953)
+	function initialize1() {
+	  var myLatLng1 = new google.maps.LatLng(61.246869, 73.413953);
+	  var mapOptions1 = {
+	    zoom: 17,
+	    center: myLatLng1
 	  }
-	  var map_1 = new google.maps.Map(document.getElementById('map-office-1'),
-	                                mapOptions_1);
+	  var map1 = new google.maps.Map(document.getElementById('map-office-1'),
+	                                mapOptions1);
 
 	  var image = 'img/icons/marker-office.png';
-	  var myLatLng_1 = new google.maps.LatLng(61.246869, 73.413953);
 	  var officeMarker = new google.maps.Marker({
-	      position: myLatLng_1,
-	      map: map_1,
+	      position: myLatLng1,
+	      map: map1,
 	      icon: image
 	  });
 	}
 
-	google.maps.event.addDomListener(window, 'load', initialize_1);
+	google.maps.event.addDomListener(window, 'load', initialize1);
 
-	function initialize_2() {
-	  var mapOptions_2 = {
-	    zoom: 16,
-	    center: new google.maps.LatLng(55.641312, 37.470525)
+	function initialize2() {
+	  var myLatLng2 = new google.maps.LatLng(55.641312, 37.470525);
+	  var mapOptions2 = {
+	    zoom: 17,
+	    center: myLatLng2
 	  }
-	  var map_2 = new google.maps.Map(document.getElementById('map-office-2'),
-	                                mapOptions_2);
+	  var map2 = new google.maps.Map(document.getElementById('map-office-2'),
+	                                mapOptions2);
 
 	  var image = 'img/icons/marker-office.png';
-	  var myLatLng_2 = new google.maps.LatLng(55.641312, 37.470525);
 	  var officeMarker = new google.maps.Marker({
-	      position: myLatLng_2,
-	      map: map_2,
+	      position: myLatLng2,
+	      map: map2,
 	      icon: image
 	  });
 	}
 
-	google.maps.event.addDomListener(window, 'load', initialize_2);
+	google.maps.event.addDomListener(window, 'load', initialize2);
 
-	function initialize_3() {
-	  var mapOptions_3 = {
-	    zoom: 16,
-	    center: new google.maps.LatLng(53.187549, 50.083484)
+	function initialize3() {
+	  var myLatLng3 = new google.maps.LatLng(53.187549, 50.083484);
+	  var mapOptions3 = {
+	    zoom: 17,
+	    center: myLatLng3
 	  }
-	  var map_3 = new google.maps.Map(document.getElementById('map-office-3'),
-	                                mapOptions_3);
+	  var map3 = new google.maps.Map(document.getElementById('map-office-3'),
+	                                mapOptions3);
 
 	  var image = 'img/icons/marker-office.png';
-	  var myLatLng_3 = new google.maps.LatLng(53.187549, 50.083484);
 	  var officeMarker = new google.maps.Marker({
-	      position: myLatLng_3,
-	      map: map_3,
+	      position: myLatLng3,
+	      map: map3,
 	      icon: image
 	  });
 	}
 
-	google.maps.event.addDomListener(window, 'load', initialize_3);
+	google.maps.event.addDomListener(window, 'load', initialize3);
 	
 	// index.html slider
 	$('.company__slider').slick({
