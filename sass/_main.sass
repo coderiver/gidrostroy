@@ -30,78 +30,26 @@
 			+cover
 			border-left: 1px dashed #d6d6d6
 	&__wrapper
-		display: inline-block
-		vertical-align: top
+		display: table-cell
 		width: percentage(960/1440)
 		min-height: 530px
 		height: 100%
-		.company
-			position: relative
-			min-height: 530px
-			height: 100%
-			background: url(../img/main-top-bg.jpg)
-			+cover
-			&__slider
-				position: absolute
-				right: 0
-				bottom: 0
-				left: 0
-				height: 160px
-				padding: 0 percentage(75/960)
-				background-color: rgba(0, 0, 0, 0.6)
-				text-align: center
-				.slide
-					padding-top: 25px
-					span
-						display: inline-block
-						vertical-align: middle
-						padding-bottom: 10px
-					p
-						font-weight: 600
-						font-size: 15px
-						color: #FFF
-					&.slide_1
-						span
-							+s(company_1)
-					&.slide_2
-						span
-							+s(company_2)
-					&.slide_3
-						span
-							+s(company_3)
-					&.slide_4
-						span
-							+s(company_4)
-					&.slide_5
-						span
-							+s(company_5)
-				.slick-prev:before, .slick-next:before
-					content: ""
-				.slick-prev
-					left: 30px
-					+s(prev_b)
-				.slick-next
-					right: 20px
-					+s(next_b)
 		.projects
 			height: 490px
 			margin: 0 percentage(45/959)
 	&__wrap
 		position: relative
-		display: inline-block
-		vertical-align: top
+		display: table-cell
 		width: percentage(480/1440)
 		min-height: 530px
 		height: 100%
 		p
 			padding: 0 percentage(30/480)
+			margin-bottom: 100px
 			font-size: 13px
 			color: #FFF
 		.btns
-			position: absolute
-			right: 0
-			bottom: 0
-			left: 0
+			position: relative
 			.btn
 				width: 100%
 				height: 80px
@@ -155,6 +103,7 @@
 					margin-left: percentage(20/480)
 					font-size: 0
 					p
+						margin: 0
 						padding: 0
 						font-size: 13px
 						color: #414141
@@ -164,6 +113,54 @@
 				img
 					display: inline-block
 					vertical-align: bottom
+.company
+	position: relative
+	min-height: 530px
+	height: 100%
+	background: url(../img/main-top-bg.jpg)
+	+cover
+	&__slider
+		position: absolute !important
+		right: 0
+		bottom: 0
+		left: 0
+		height: 160px
+		padding: 0 percentage(75/960)
+		background-color: rgba(0, 0, 0, 0.6)
+		text-align: center
+		.slide
+			padding-top: 25px
+			span
+				display: inline-block
+				vertical-align: middle
+				padding-bottom: 10px
+			p
+				font-weight: 600
+				font-size: 15px
+				color: #FFF
+			&.slide_1
+				span
+					+s(company_1)
+			&.slide_2
+				span
+					+s(company_2)
+			&.slide_3
+				span
+					+s(company_3)
+			&.slide_4
+				span
+					+s(company_4)
+			&.slide_5
+				span
+					+s(company_5)
+		.slick-prev:before, .slick-next:before
+			content: ""
+		.slick-prev
+			left: 30px
+			+s(prev_b)
+		.slick-next
+			right: 20px
+			+s(next_b)
 
 
 // contacts.html
@@ -337,6 +334,7 @@
 // projects.html
 .projects
 	position: relative
+	width: percentage(1300/1440)
 	height: 680px
 	margin: -82px 0 25px 23px
 	background: url("../img/map-projects.png") no-repeat
@@ -348,32 +346,32 @@
 		cursor: pointer
 		+s(marker-projects)
 		&.marker1
-			bottom: 243px
-			left: 101px
+			bottom: percentage(243/680)
+			left: percentage(101/1300)
 		&.marker2
-			bottom: 299px
-			left: 144px
+			bottom: percentage(299/680)
+			left: percentage(144/1300)
 		&.marker3
-			bottom: 242px
-			left: 171px
+			bottom: percentage(242/680)
+			left: percentage(171/1300)
 		&.marker4
-			bottom: 330px
-			left: 177px
+			bottom: percentage(330/680)
+			left: percentage(177/1300)
 		&.marker5
-			bottom: 294px
-			left: 237px
+			bottom: percentage(294/680)
+			left: percentage(237/1300)
 		&.marker6
-			bottom: 246px
-			left: 293px
+			bottom: percentage(246/680)
+			left: percentage(293/1300)
 		&.marker7
-			bottom: 203px
-			left: 404px
+			bottom: percentage(203/680)
+			left: percentage(404/1300)
 		&.marker8
-			bottom: 182px
-			left: 615px
+			bottom: percentage(182/680)
+			left: percentage(615/1300)
 		&.marker9
-			bottom: 230px
-			right: 372px
+			bottom: percentage(230/680)
+			left: percentage(917/1300)
 	&__info
 		display: none
 		position: absolute

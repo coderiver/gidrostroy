@@ -39,7 +39,7 @@ a
 				margin-top: 24px
 				text-align: right
 				font-weight: lighter
-				padding-left: percentage(17/1440)
+				padding-left: 17px
 				a
 					display: block
 					&.phone
@@ -56,7 +56,7 @@ a
 						padding-top: 11px
 				&.bober
 					margin: 25px 0 10px
-					padding-left: percentage(45/1440)
+					padding-left: 45px
 	&__bottom
 		background: #0A6A86
 		overflow: hidden
@@ -71,14 +71,23 @@ a
 				font-size: 0
 				+clr
 				li
+					position: relative
 					float: left
-					height: 39px
-					border-right: 1px solid #33839a
-					margin: 15px 0
+					height: 70px
+					&:after
+						content: ""
+						position: absolute
+						top: 15px
+						bottom: 15px
+						left: 0
+						width: 1px
+						background: #33839a
+					&:first-child:after
+						display: none
 					a
-						display: block
-						margin-top: -15px
-						padding: 22px 15%
+						display: inline-block
+						vertical-align: top
+						padding: 22px 15px
 						font-weight: lighter
 						font-size: 18px
 						color: #FFF
@@ -101,7 +110,7 @@ a
 				input
 					width: 100%
 					height: 37px
-					padding: 10px percentage(40/1440) 10px percentage(10/1440)
+					padding: 10px 40px 10px 10px
 					border: 1px solid #33839a
 					background: #065d77
 					color: #FFF
@@ -138,6 +147,7 @@ a
 	&__logo
 		display: inline-block
 		vertical-align: top
+		min-width: 246px
 		width: percentage(270/1290) 
 	&__menu
 		display: inline-block
@@ -147,26 +157,32 @@ a
 		li
 			display: inline-block
 			vertical-align: top
+			width: auto
 			border-right: 1px solid #ECECEC 
 			&:last-child
 				border: none
 			a
-				display: block
-				padding: 10px 9%
+				display: inline-block
+				padding: 10px
 				font-weight: lighter
 				font-size: 16px
 				color: #686868 
+				+r(1220)
+					padding: 12px 8px
+					font-size: 14px
 				&.phone
 					display: inline-block
 					vertical-align: top
 					color: #000
 					font-size: 15px
-					padding: 10px 1% 10px 5% 
+					padding: 10px 0 10px 30px
+					+r(1240)
+						padding-left: 10px
 				&.mail
 					display: inline-block
 					vertical-align: top
 					font-size: 15px 
-					padding: 10px 3%
+					padding: 10px
 				&:hover
 					color: darken(#686868, 100%)
 	&__bottom
@@ -189,10 +205,10 @@ a
 	min-height: 100%
 	height: auto !important
 	height: 100%
-	margin-bottom: -100px		
+	margin-bottom: -120px		
 
 .push
-	height: 100px
+	height: 120px
 
 .content
 	&__in
