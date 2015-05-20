@@ -35,7 +35,7 @@
 		min-height: 530px
 		height: 100%
 		.projects
-			height: 490px
+			// height: 490px
 			margin: 0 percentage(45/959)
 	&__wrap
 		position: relative
@@ -335,43 +335,52 @@
 .projects
 	position: relative
 	width: percentage(1300/1440)
-	height: 680px
-	margin: -82px 0 25px 23px
-	background: url("../img/map-projects.png") no-repeat
-	background-size: contain
-	background-position: 50% 50%
+	// height: 680px
+	// margin: -82px 0 25px 23px
+	// background: url("../img/map-projects.png") no-repeat
+	// background-size: contain
+	// background-position: 50% 50%
+	// width: 1300px 
+	img
+		display: block
+		width: 100% 
 	&__marker
 		position: absolute
 		display: block
 		cursor: pointer
 		+s(marker-projects)
+		margin-left: -13px
+		margin-top: -43px  
+		// width: 2px 
+		// height: 2px
+		// background: red  
 		&.marker1
-			bottom: percentage(243/680)
-			left: percentage(101/1300)
+			top: percentage(439/678)
+			left: percentage(110/1300)
 		&.marker2
-			bottom: percentage(299/680)
-			left: percentage(144/1300)
+			top: percentage(381/678)
+			left: percentage(158/1300)
 		&.marker3
-			bottom: percentage(242/680)
-			left: percentage(171/1300)
+			top: percentage(438/678)
+			left: percentage(186/1300)
 		&.marker4
-			bottom: percentage(330/680)
-			left: percentage(177/1300)
+			top: percentage(350/678)
+			left: percentage(190/1300)
 		&.marker5
-			bottom: percentage(294/680)
-			left: percentage(237/1300)
+			top: percentage(390/678)
+			left: percentage(251/1300)
 		&.marker6
-			bottom: percentage(246/680)
-			left: percentage(293/1300)
+			top: percentage(435/678)
+			left: percentage(308/1300)
 		&.marker7
-			bottom: percentage(203/680)
-			left: percentage(404/1300)
+			top: percentage(477/678)
+			left: percentage(419/1300)
 		&.marker8
-			bottom: percentage(182/680)
-			left: percentage(615/1300)
+			top: percentage(497/678)
+			left: percentage(631/1300)
 		&.marker9
-			bottom: percentage(230/680)
-			left: percentage(917/1300)
+			top: percentage(451/678)
+			left: percentage(934/1300)
 	&__info
 		display: none
 		position: absolute
